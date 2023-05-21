@@ -24,7 +24,7 @@ const Home = ({ pageTitle, posts }: Props) => {
       <section className="max-w-[1180px] min-h-full flex flex-col justify-center mx-auto py-10 px-3 gap-5">
         {posts.map((post) => (
           <>
-            <div className="flex h-full w-full flex-col gap-5 justify-start items-center py-4 bg-gray-100 p-3 rounded-md">
+            <div className="flex h-full w-full flex-col gap-5 justify-center md:justify-start items-center py-4 bg-gray-100 p-3 rounded-md">
               <div className="flex h-[10.5rem] w-full justify-center gap-4 items-center pb-10">
                 <div className="h-[7.8rem] w-[12rem] flex flex-col justify-center items-center p-2 gap-2">
                   <svg
@@ -55,7 +55,7 @@ const Home = ({ pageTitle, posts }: Props) => {
                   </span>
                 </div>
 
-                <div className="w-full flex flex-col md:gap-2">
+                <div className="w-full flex flex-col justify-center md:gap-2">
                   <span className="w-full h-full flex flex-col md:flex-row items-center gap-2">
                     <div className="rating rating-sm">
                       <input
@@ -108,7 +108,7 @@ const Home = ({ pageTitle, posts }: Props) => {
                     </span>
                   </div>
                 </div>
-                <div className="flex flex-col md:flex-row gap-2">
+                <div className="flex flex-col justify-center md:flex-row gap-2">
                   <span className="items-center flex flex-col gap-2 font-normal font-sans">
                     <svg
                       width="40"

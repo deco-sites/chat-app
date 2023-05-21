@@ -71,8 +71,8 @@
               "$live/sections/Slot.tsx",
               "$live/sections/UseSlot.tsx",
               "deco-sites/chat-app/sections/DesignSystem.tsx",
-              "deco-sites/chat-app/sections/GetStarted.tsx",
               "deco-sites/chat-app/sections/Head.tsx",
+              "deco-sites/chat-app/sections/Index.tsx",
               "deco-sites/std/sections/Analytics.tsx",
               "deco-sites/std/sections/configButterCMS.global.tsx",
               "deco-sites/std/sections/configOCC.global.tsx",
@@ -7215,20 +7215,6 @@
       "required": [],
       "title": "deco-sites/chat-app/sections/DesignSystem.tsx@Props"
     },
-    "ZGVjby1zaXRlcy9jaGF0LWFwcC9zZWN0aW9ucy9HZXRTdGFydGVkLnRzeA==@Props": {
-      "type": "object",
-      "properties": {
-        "enableInspectVSCode": {
-          "type": [
-            "boolean",
-            "null"
-          ],
-          "title": "Enable Inspect V S Code"
-        }
-      },
-      "required": [],
-      "title": "deco-sites/chat-app/sections/GetStarted.tsx@Props"
-    },
     "ZGVjby1zaXRlcy9jaGF0LWFwcC9zZWN0aW9ucy9IZWFkLnRzeA==@Props": {
       "type": "object",
       "properties": {
@@ -7266,6 +7252,85 @@
         "themeColor"
       ],
       "title": "deco-sites/chat-app/sections/Head.tsx@Props"
+    },
+    "ZGVjby1zaXRlcy9jaGF0LWFwcC9zZWN0aW9ucy9JbmRleC50c3g=@Post": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "title": "Title"
+        },
+        "content": {
+          "type": "string",
+          "title": "Content"
+        },
+        "rating": {
+          "type": "number",
+          "title": "Rating"
+        },
+        "user": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "title": "Name"
+            }
+          },
+          "required": [
+            "name"
+          ],
+          "title": "User"
+        },
+        "totalLikes": {
+          "type": "number",
+          "title": "Total Likes"
+        },
+        "totalDeslikes": {
+          "type": "number",
+          "title": "Total Deslikes"
+        },
+        "releaseDate": {
+          "type": "string",
+          "title": "Release Date"
+        }
+      },
+      "required": [
+        "title",
+        "content",
+        "rating",
+        "user",
+        "totalLikes",
+        "totalDeslikes",
+        "releaseDate"
+      ],
+      "title": "Post"
+    },
+    "ZGVjby1zaXRlcy9jaGF0LWFwcC9zZWN0aW9ucy9JbmRleC50c3g=@Post[]": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/ZGVjby1zaXRlcy9jaGF0LWFwcC9zZWN0aW9ucy9JbmRleC50c3g=@Post"
+      },
+      "title": "Post[]"
+    },
+    "ZGVjby1zaXRlcy9jaGF0LWFwcC9zZWN0aW9ucy9JbmRleC50c3g=@Props": {
+      "type": "object",
+      "properties": {
+        "pageTitle": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "title": "Page Title"
+        },
+        "posts": {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9jaGF0LWFwcC9zZWN0aW9ucy9JbmRleC50c3g=@Post[]",
+          "title": "Posts"
+        }
+      },
+      "required": [
+        "posts"
+      ],
+      "title": "deco-sites/chat-app/sections/Index.tsx@Props"
     },
     "ZGVjby1zaXRlcy9zdGQvY29tcG9uZW50cy9BbmFseXRpY3MudHN4@Props": {
       "type": "object",
@@ -9397,27 +9462,6 @@
         }
       }
     },
-    "ZGVjby1zaXRlcy9jaGF0LWFwcC9zZWN0aW9ucy9HZXRTdGFydGVkLnRzeA==": {
-      "title": "deco-sites/chat-app/sections/GetStarted.tsx",
-      "type": "object",
-      "allOf": [
-        {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9jaGF0LWFwcC9zZWN0aW9ucy9HZXRTdGFydGVkLnRzeA==@Props"
-        }
-      ],
-      "required": [
-        "__resolveType"
-      ],
-      "properties": {
-        "__resolveType": {
-          "type": "string",
-          "enum": [
-            "deco-sites/chat-app/sections/GetStarted.tsx"
-          ],
-          "default": "deco-sites/chat-app/sections/GetStarted.tsx"
-        }
-      }
-    },
     "ZGVjby1zaXRlcy9jaGF0LWFwcC9zZWN0aW9ucy9IZWFkLnRzeA==": {
       "title": "deco-sites/chat-app/sections/Head.tsx",
       "type": "object",
@@ -9436,6 +9480,27 @@
             "deco-sites/chat-app/sections/Head.tsx"
           ],
           "default": "deco-sites/chat-app/sections/Head.tsx"
+        }
+      }
+    },
+    "ZGVjby1zaXRlcy9jaGF0LWFwcC9zZWN0aW9ucy9JbmRleC50c3g=": {
+      "title": "deco-sites/chat-app/sections/Index.tsx",
+      "type": "object",
+      "allOf": [
+        {
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9jaGF0LWFwcC9zZWN0aW9ucy9JbmRleC50c3g=@Props"
+        }
+      ],
+      "required": [
+        "__resolveType"
+      ],
+      "properties": {
+        "__resolveType": {
+          "type": "string",
+          "enum": [
+            "deco-sites/chat-app/sections/Index.tsx"
+          ],
+          "default": "deco-sites/chat-app/sections/Index.tsx"
         }
       }
     },
@@ -10496,10 +10561,10 @@
           "$ref": "#/definitions/ZGVjby1zaXRlcy9jaGF0LWFwcC9zZWN0aW9ucy9EZXNpZ25TeXN0ZW0udHN4"
         },
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9jaGF0LWFwcC9zZWN0aW9ucy9HZXRTdGFydGVkLnRzeA=="
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9jaGF0LWFwcC9zZWN0aW9ucy9IZWFkLnRzeA=="
         },
         {
-          "$ref": "#/definitions/ZGVjby1zaXRlcy9jaGF0LWFwcC9zZWN0aW9ucy9IZWFkLnRzeA=="
+          "$ref": "#/definitions/ZGVjby1zaXRlcy9jaGF0LWFwcC9zZWN0aW9ucy9JbmRleC50c3g="
         },
         {
           "$ref": "#/definitions/ZGVjby1zaXRlcy9zdGQvc2VjdGlvbnMvQW5hbHl0aWNzLnRzeA=="
